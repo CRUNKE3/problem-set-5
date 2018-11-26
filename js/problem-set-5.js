@@ -27,9 +27,15 @@ function mario() {
   ////////////// DO NOT MODIFY
 
 height = prompt("Enter a whole number from 1-23:");
+//not Correct try later because you stink
+do {
+  var div = document.getElementById("mario-easy-output");
+  div.innerHTML = `${height}`
+} while (height === 1||2||3||4||5||6||7||8||9||10||11||12||13||14||15||16||17||18||19||20||21||22||23);
 
-if (height !== 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19 || 20 || 21 || 22 || 23)
-  prompt("Please Try Again and Comply with the Restrictions");
+while (height !== 1||2||3||4||5||6||7||8||9||10||11||12||13||14||15||16||17||18||19||20||21||22||23) {
+  height = prompt("Please Try Again and Comply with Restrictions");
+}
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -155,7 +161,18 @@ function credit() {
 
 function guess() {
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+let mystery = (Math.random()*1000).toFixed(0);
+let yourGuess = prompt("Guess a number from 1-1000 (its a whole number btw):")
+let attempts = 1
+if (yourGuess!=mystery){
+  do {
+    yourGuess = prompt("Keep Guessing (hint:" + (mystery-yourGuess) + "):")
+    var div = document.getElementById("guess-output")
+    div.innerHTML="Attempts: "+attempts++
+  } while (yourGuess!=mystery)
+} else if (yourGuess==mystery){
+  alert("You Guessed Correctly!");
+}
 
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
@@ -191,6 +208,8 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+
+
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
