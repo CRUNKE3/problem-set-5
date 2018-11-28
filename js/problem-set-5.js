@@ -35,7 +35,8 @@ height = prompt("Enter a whole number from 1-23:");
 
 
 for (let i=0; i ; i++) {
-
+blank = height - i
+hashtag = i
 }
 var div = document.getElementById("mario-easy-output");
 div.innerHTML = `${text}`
