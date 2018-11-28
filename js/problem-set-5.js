@@ -28,17 +28,21 @@ function mario() {
 
 height = prompt("Enter a whole number from 1-23:");
 //not Correct try later because you stink
-do {
-  var div = document.getElementById("mario-easy-output");
-  div.innerHTML = `${height}`
-} while (height === 1||2||3||4||5||6||7||8||9||10||11||12||13||14||15||16||17||18||19||20||21||22||23);
+ var text;
+ let blank;
+ var hashtag;
+ let row;
 
-while (height !== 1||2||3||4||5||6||7||8||9||10||11||12||13||14||15||16||17||18||19||20||21||22||23) {
-  height = prompt("Please Try Again and Comply with Restrictions");
+
+for (let i=0; i ; i++) {
+
 }
+var div = document.getElementById("mario-easy-output");
+div.innerHTML = `${text}`
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
+
 }
 
 /*
