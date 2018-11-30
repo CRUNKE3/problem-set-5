@@ -26,20 +26,19 @@ function mario() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-height = prompt("Enter a whole number from 1-23:");
-//not Correct try later because you stink
- var text;
- let blank;
- var hashtag;
- let row;
+while (true) {
+  height = prompt("Enter a whole number from 1-23:");
+  height = Number(height);
+  if (height <= 23 && height >= 1 && Number.isInteger(height)){
+    break;
+  }
+};
+let i = 1
+let hashtagNeeded;
 
 
-for (let i=0; i ; i++) {
-blank = height - i
-hashtag = i
-}
-var div = document.getElementById("mario-easy-output");
-div.innerHTML = `${text}`
+  var div = document.getElementById("mario-easy=output");
+
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
