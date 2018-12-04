@@ -80,7 +80,30 @@ function marioAgain() {
   let height; // DO NOT MODIFY
   ////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+let block = "#";
+   let space = "&nbsp;"
+   let row = "";
+   while(true) {
+     height = Number(prompt("Please enter a number between 1 and 23:"));
+     if(height >=1 && height <=23 && Number.isInteger(height)) {
+       for(let i=0; i<height; i++) {
+         for(let x=0; x<=(height-2-i); x++) {
+         row = row + space;
+       }
+       for(let y=0; y<=(1+i); y++) {
+           row = row + block;
+         }
+         row = row + space + space;
+         for(let v=0; v<=(1+i); v++) {
+           row = row + block;
+         }
+         row = row + "<br/>";
+       }
+       document.getElementById("mario-hard-output").innerHTML="<code>" + row + "</code>";
+       break;
+     }
+   }
+
 
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
