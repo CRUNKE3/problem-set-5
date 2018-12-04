@@ -30,23 +30,25 @@ let block = "#";
 let space = "&nbsp;"
 let row = "";
   
-while (true) {
-  height = prompt("Enter a whole number from 1-23:");
-  height = Number(height);
-  if (height <= 23 && height >= 1 && Number.isInteger(height)){
-    for(let i=0; i<height; i++) {
+  let block = "#";
+  let space = "&nbsp;"
+  let row = "";
+  while(true) {
+   height = Number(prompt("Please enter a number between 1 and 23:"));
+   if(height >=1 && height <=23 && Number.isInteger(height)) {
+     for(let i=0; i<height; i++) {
        for(let x=0; x<=(height-2-i); x++) {
        row = row + space;
+     }
+     for(let y=0; y<=(1+i); y++) {
+         row = row + block;
        }
-      for(let y=0; y<=(1+i); y++) {
-        row = row + block;
-      }
-      row = row + block
-    }
-    document.getElementById("mario-easy-output").innerHTML="<code>" + row + "</code>";
-    break;
+       row = row + "<br/>";
+     }
+     document.getElementById("mario-easy-output").innerHTML="<code>" + row + "</code>";
+     break;
+   }
   }
-};
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
