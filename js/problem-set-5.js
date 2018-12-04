@@ -27,10 +27,6 @@ function mario() {
   ////////////// DO NOT MODIFY
 
 let block = "#";
-let space = "&nbsp;"
-let row = "";
-  
-  let block = "#";
   let space = "&nbsp;"
   let row = "";
   while(true) {
