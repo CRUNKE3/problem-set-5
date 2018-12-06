@@ -232,13 +232,11 @@ function guess() {
 let mystery = (Math.random()*1000).toFixed(0);
 let yourGuess = prompt("Guess a number from 1-1000 (its a whole number btw):")
 let attempts = 1
-if (yourGuess!=mystery){
-  do {
-    yourGuess = prompt("Keep Guessing (hint:" + (mystery-yourGuess) + "):")
-    var div = document.getElementById("guess-output")
-    div.innerHTML="Attempts: "+attempts++
-  } while (yourGuess!=mystery)
-} else if (yourGuess==mystery){
+if (yourGuess > mystery) {
+  yourGuess = prompt("Too high, guess a bit lower")
+} else if (yourGuess < mystery) {
+  yourGuess = prompt("Too low, guess a bit higher")
+} else {
   alert("You Guessed Correctly!");
 }
 
